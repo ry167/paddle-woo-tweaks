@@ -10,6 +10,8 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Tweaks to the WooCommerce Paddle Gateway plugin including country and post code support and adding a small tax disclaimer to the checkout.
 
+You can get the main gateway plugin from here: https://wpsmartpay.com/paddle-for-woocommerce/
+
 If you want to know about plugin updates, please Watch the repository on Github: https://github.com/ry167/paddle-woo-tweaks
 
 == Installation ==

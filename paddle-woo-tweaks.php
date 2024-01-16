@@ -56,6 +56,16 @@ function paddle_tweak_add_checkout_tax_notice(){
 	<?php
 }
 
+function paddle_tweak_product_tax_notice(){
+	if (wc_prices_include_tax()) return;
+
+	?>
+	<div class="paddle-tweaks-product-tax-notice">
+		<?php esc_html_e( 'Any sales taxes will be calculated in the checkout.', 'paddle-woo-tweaks' ); ?>
+	</div>
+	<?php
+}
+
 function paddle_tweak_missing_dependencies()
 {
     echo __('<div class="error notice-warning"><p>You must install and active <code>WooCommerce</code> and <code>WooCommerce Paddle Gateway</code> to use the <code>WooCommerce Paddle Gateway - Tweaks</code> plugin.</p></div>', 'paddle-woo-tweaks');
@@ -91,5 +101,8 @@ function paddle_tweak_setup(){
 
 	// Add a notice to the checkout page if taxes are not included
 	add_action('woocommerce_review_order_after_order_total', 'paddle_tweak_add_checkout_tax_notice');
+
+	// Add a notice to the product page if taxes are not included
+	add_action('woocommerce_single_product_summary', 'paddle_tweak_product_tax_notice', 11);
 }
 add_action('init', 'paddle_tweak_setup');

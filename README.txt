@@ -1,3 +1,5 @@
+PROJECT ARCHIVED - This is no longer up to date with the latest versions of WooCommerce Paddle Gateway.
+
 === WooCommerce Paddle Gateway - Tweaks ===
 Contributors: ryanhalliday
 Tags: paddle woocommerce
